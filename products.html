@@ -15,44 +15,27 @@
         <h1>StyleHub</h1>
     </div>
 
-  <div class="menu-toggle">
+    <div class="menu-toggle">&#9776;</div>
 
-&#9776;
-
-</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="products.html">Products</a></li>
-
-<li><a href="about.html">About</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-<li><a href="account.html">Account</a></li>
-
-<li><a href="cart.html">Cart</a></li>
-
-<li><a href="login.html">Login</a></li>
-
-</ul>
-
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
 
 </header>
-
-<main>
 
 <section class="page-title">
 
 <h2>Our Fashion Collection</h2>
 
 <p>
-Browse our latest collection of clothing, footwear and accessories.
+Discover premium fashion for every occasion.
 </p>
 
 </section>
@@ -61,44 +44,15 @@ Browse our latest collection of clothing, footwear and accessories.
 
 <input
 type="text"
-placeholder="Search Products">
+id="search"
+placeholder="Search products...">
 
-<select>
-<option>Category</option>
-<option>Men</option>
-<option>Women</option>
-<option>Kids</option>
-<option>Accessories</option>
-</select>
-
-<select>
-<option>Size</option>
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-</select>
-
-<select>
-<option>Colour</option>
-<option>Black</option>
-<option>White</option>
-<option>Pink</option>
-<option>Blue</option>
-</select>
-
-<select>
-<option>Price</option>
-<option>Below ₹1000</option>
-<option>₹1000 - ₹3000</option>
-<option>Above ₹3000</option>
-</select>
-
-<select>
-<option>Brand</option>
-<option>StyleHub</option>
-<option>Urban Wear</option>
-<option>Fashion Plus</option>
+<select id="category">
+<option value="all">All Categories</option>
+<option value="men">Men</option>
+<option value="women">Women</option>
+<option value="accessories">Accessories</option>
+<option value="footwear">Footwear</option>
 </select>
 
 </section>
@@ -107,75 +61,232 @@ placeholder="Search Products">
 
 <div class="product-container">
 
-<div class="product-card">
+<!-- Product 1 -->
+
+<div class="product-card" data-category="men">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+alt="Hoodie">
+
 <h3>Men's Premium Hoodie</h3>
+
 <p>₹2,499</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=hoodie">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 2 -->
+
+<div class="product-card" data-category="women">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600"
+alt="Dress">
+
 <h3>Women's Floral Dress</h3>
+
 <p>₹1,999</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=dress">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 3 -->
+
+<div class="product-card" data-category="footwear">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+alt="Sneakers">
+
 <h3>Classic Sneakers</h3>
+
 <p>₹3,499</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=sneakers">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 4 -->
+
+<div class="product-card" data-category="men">
+
+<img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=600"
+alt="Jacket">
+
 <h3>Leather Jacket</h3>
+
 <p>₹4,999</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=jacket">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 5 -->
+
+<div class="product-card" data-category="accessories">
+
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600"
+alt="Handbag">
+
 <h3>Premium Handbag</h3>
+
 <p>₹2,299</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=handbag">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 6 -->
+
+<div class="product-card" data-category="accessories">
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+alt="Watch">
+
 <h3>Smart Watch</h3>
+
 <p>₹3,999</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=watch">
+
+<button>View Product</button>
+
+</a>
+
 </div>
-<div class="product-card">
+
+<!-- Product 7 -->
+
+<div class="product-card" data-category="men">
+
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600"
+alt="T-Shirt">
+
 <h3>Casual T-Shirt</h3>
+
 <p>₹799</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=tshirt">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 8 -->
+
+<div class="product-card" data-category="men">
+
+<img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600"
+alt="Jeans">
+
 <h3>Blue Denim Jeans</h3>
+
 <p>₹1,499</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=jeans">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 9 -->
+
+<div class="product-card" data-category="men">
+
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600"
+alt="Shirt">
+
 <h3>Summer Cotton Shirt</h3>
+
 <p>₹999</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=shirt">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 10 -->
+
+<div class="product-card" data-category="women">
+
+<img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600"
+alt="Blazer">
+
 <h3>Women's Blazer</h3>
+
 <p>₹2,799</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=blazer">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 11 -->
+
+<div class="product-card" data-category="footwear">
+
+<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600"
+alt="Sports Shoes">
+
 <h3>Sports Shoes</h3>
+
 <p>₹2,999</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=sportsshoes">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
-<div class="product-card">
+<!-- Product 12 -->
+
+<div class="product-card" data-category="accessories">
+
+<img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+alt="Backpack">
+
 <h3>Travel Backpack</h3>
+
 <p>₹1,899</p>
-<a href="product.html"><button>View Product</button></a>
+
+<a href="product.html?product=backpack">
+
+<button>View Product</button>
+
+</a>
+
 </div>
 
 </div>
@@ -187,34 +298,36 @@ placeholder="Search Products">
 <h2>Subscribe to Our Newsletter</h2>
 
 <p>
-Get the latest fashion trends, exclusive offers and new arrivals directly to your inbox.
+Get updates on the latest fashion trends and exclusive offers.
 </p>
 
 <form>
 
 <input
 type="email"
-placeholder="Enter your email address"
+placeholder="Enter your email"
 required>
 
 <button type="submit">
+
 Subscribe
+
 </button>
 
 </form>
 
 </section>
 
-</main>
-
 <footer>
+
+<div class="footer-container">
 
 <div class="footer-section">
 
 <h3>StyleHub</h3>
 
 <p>
-StyleHub is your destination for premium fashion, quality apparel and stylish accessories at affordable prices.
+Your one-stop destination for premium fashion, footwear and accessories.
 </p>
 
 </div>
@@ -224,23 +337,28 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <h3>Quick Links</h3>
 
 <ul>
+
 <li><a href="index.html">Home</a></li>
 <li><a href="products.html">Products</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="contact.html">Contact Us</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="account.html">Account</a></li>
+
 </ul>
 
 </div>
 
 <div class="footer-section">
 
-<h3>Customer Service</h3>
+<h3>Customer Care</h3>
 
 <ul>
+
 <li><a href="#">FAQs</a></li>
-<li><a href="#">Shipping Policy</a></li>
-<li><a href="#">Return Policy</a></li>
+<li><a href="#">Returns</a></li>
+<li><a href="#">Shipping</a></li>
 <li><a href="#">Privacy Policy</a></li>
+
 </ul>
 
 </div>
@@ -250,23 +368,113 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <h3>Follow Us</h3>
 
 <ul>
+
 <li><a href="#">Facebook</a></li>
 <li><a href="#">Instagram</a></li>
 <li><a href="#">Twitter</a></li>
 <li><a href="#">YouTube</a></li>
+
 </ul>
+
+</div>
 
 </div>
 
 <hr>
 
 <p class="copyright">
-&copy; 2026 StyleHub. All Rights Reserved.
+
+© 2026 StyleHub. All Rights Reserved.
+
 </p>
 
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+
+// =====================
+// SEARCH
+// =====================
+
+const search = document.getElementById("search");
+
+const cards = document.querySelectorAll(".product-card");
+
+search.addEventListener("keyup", function () {
+
+const value = this.value.toLowerCase();
+
+cards.forEach(card => {
+
+const title = card.querySelector("h3").textContent.toLowerCase();
+
+if (title.includes(value)) {
+
+card.style.display = "block";
+
+}
+
+else {
+
+card.style.display = "none";
+
+}
+
+});
+
+});
+
+// =====================
+// CATEGORY FILTER
+// =====================
+
+const category = document.getElementById("category");
+
+category.addEventListener("change", function () {
+
+const selected = this.value;
+
+cards.forEach(card => {
+
+if (selected === "all") {
+
+card.style.display = "block";
+
+}
+
+else if (card.dataset.category === selected) {
+
+card.style.display = "block";
+
+}
+
+else {
+
+card.style.display = "none";
+
+}
+
+});
+
+});
+
+// =====================
+// HAMBURGER MENU
+// =====================
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+
+navMenu.classList.toggle("active");
+
+});
+
+</script>
 
 </body>
 </html>

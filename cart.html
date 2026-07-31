@@ -53,12 +53,7 @@
 
 <table>
 
-<tr>
-<th>Product</th>
-<th>Price</th>
-<th>Quantity</th>
-<th>Total</th>
-</tr>
+<thead>
 
 <tr>
 <th>Product</th>
@@ -67,37 +62,35 @@
 <th>Price</th>
 <th>Quantity</th>
 <th>Total</th>
+<th>Action</th>
 </tr>
 
-<tr>
-<td>Men's Premium Hoodie</td>
-<td>L</td>
-<td>Black</td>
-<td>₹2,499</td>
-<td>1</td>
-<td>₹2,499</td>
-</tr>
+</thead>
 
-<tr>
-<td>Classic Sneakers</td>
-<td>9</td>
-<td>White</td>
-<td>₹3,499</td>
-<td>1</td>
-<td>₹3,499</td>
-</tr>
+<tbody id="cart-items">
+
+</tbody>
 
 </table>
+
 
 <section class="cart-summary">
 
 <h3>Order Summary</h3>
 
-<p>Subtotal: ₹5,998</p>
+<p>
+Subtotal:
+<span id="total-price">₹0</span>
+</p>
 
-<p>Shipping Charges: ₹99</p>
+<p>
+Shipping Charges: ₹99
+</p>
 
-<h2>Total: ₹6,097</h2>
+<h2>
+Grand Total:
+<span id="grand-total">₹99</span>
+</h2>
 
 <br>
 

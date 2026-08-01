@@ -69,14 +69,20 @@
 
 <h3>Payment Method</h3>
 
-<input type="radio" id="cod" name="payment" checked>
-<label for="cod">Cash on Delivery</label><br><br>
+<div class="payment-option">
+    <input type="radio" id="cod" name="payment" checked>
+    <label for="cod">Cash on Delivery</label>
+</div>
 
-<input type="radio" id="card" name="payment">
-<label for="card">Credit / Debit Card</label><br><br>
+<div class="payment-option">
+    <input type="radio" id="card" name="payment">
+    <label for="card">Credit / Debit Card</label>
+</div>
 
-<input type="radio" id="upi" name="payment">
-<label for="upi">UPI</label><br><br>
+<div class="payment-option">
+    <input type="radio" id="upi" name="payment">
+    <label for="upi">UPI</label>
+</div>
 
 <h3>Coupon Code</h3>
 
@@ -86,16 +92,16 @@ placeholder="Enter Coupon Code">
 
 <h3>Order Summary</h3>
 
-<p>Subtotal: ₹5,998</p>
+<p>Subtotal: <span id="checkout-subtotal">₹0</span></p>
 
 <p>Shipping Charges: ₹99</p>
 
-<h2>Total: ₹6,097</h2>
+<h2>Total: <span id="checkout-total">₹99</span></h2>
 
 <br>
 
-<button type="submit">
-Place Order
+<button type="button" onclick="placeOrder()">
+    Place Order
 </button>
 
 </form>

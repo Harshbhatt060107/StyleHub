@@ -649,3 +649,22 @@ footer p{
     button{
         width:100%;
     }
+
+
+.payment-option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:15px 0;
+}
+
+.payment-option input[type="radio"]{
+    width:auto;
+    margin:0;
+}
+
+.payment-option label{
+    margin:0;
+    font-weight:500;
+    cursor:pointer;
+}

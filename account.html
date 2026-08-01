@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account | StyleHub</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>My Account | StyleHub</title>
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
-        <h1>StyleHub</h1>
-    </div>
+<div class="logo">
 
-   <div class="menu-toggle">
+<h1>StyleHub</h1>
+
+</div>
+
+<div class="menu-toggle">
 
 &#9776;
 
@@ -33,7 +43,7 @@
 
 <li><a href="contact.html">Contact</a></li>
 
-<li><a href="account.html">Account</a></li>
+<li><a href="account.html" class="active">Account</a></li>
 
 <li><a href="cart.html">Cart</a></li>
 
@@ -49,101 +59,124 @@
 
 <section class="account">
 
-<h2>Create Your Account</h2>
+<h2>👋 Welcome Back, Demo User</h2>
 
-<form>
-<hr>
+<p>
 
-<h3>Profile</h3>
+Manage your StyleHub account and view your latest activity.
 
-<p>Name: Demo User</p>
+</p>
 
-<p>Email: demo@stylehub.com</p>
+<div class="account-card">
 
-<hr>
+<h3>Profile Information</h3>
 
-<h3>Order History</h3>
+<p><strong>Name:</strong> Demo User</p>
 
-<p>No previous orders available.</p>
+<p><strong>Email:</strong> demouser@gmail.com</p>
 
-<hr>
+<p><strong>Account Status:</strong> 🟢 Active</p>
 
-<h3>Saved Address</h3>
+<p><strong>Member Since:</strong> 2026</p>
 
-<p>No saved addresses available.</p>
+</div>
 
-<hr>
+<br>
+
+<div class="account-card">
+
+<h3>My Orders</h3>
+
+<div class="product-card">
+
+<img
+src="images/sneakers.jpeg"
+alt="Nike Air Force 1">
+
+<h4>Nike Air Force 1</h4>
+
+<p>₹7,499</p>
+
+<p>Delivered ✅</p>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="account-card">
 
 <h3>Wishlist</h3>
 
-<p>Your wishlist is currently empty.</p>
+<div class="product-card">
 
-<hr>
+<img
+src="images/watch.jpeg"
+alt="Rolex Automatic Watch">
 
-<h3>Size Preference</h3>
+<h4>Rolex Automatic Watch</h4>
 
-<p>Preferred Size: Medium</p>
+<p>₹1,99,999</p>
 
-<label for="fullname">Full Name</label><br>
+<p>Saved for Later ❤️</p>
 
-<input
-type="text"
-id="fullname"
-placeholder="Enter your full name"
-required>
+</div>
 
-<br><br>
+</div>
 
-<label for="email">Email Address</label><br>
+<br>
 
-<input
-type="email"
-id="email"
-placeholder="Enter your email address"
-required>
+<div class="account-card">
 
-<br><br>
+<h3>Saved Address</h3>
 
-<label for="password">Password</label><br>
+<p>
 
-<input
-type="password"
-id="password"
-placeholder="Create a password"
-required>
+<strong>Demo User</strong>
 
 <br><br>
 
-<label for="confirm-password">Confirm Password</label><br>
+New Delhi,
 
-<input
-type="password"
-id="confirm-password"
-placeholder="Confirm your password"
-required>
+India
 
-<br><br>
+</p>
 
-<button type="submit">
-Create Account
+</div>
+
+<br>
+
+<div class="account-card">
+
+<h3>Quick Actions</h3>
+
+<button onclick="window.location.href='products.html'">
+
+Continue Shopping
+
 </button>
 
 <br><br>
 
-<p>
-Already have an account?
-<a href="login.html">Login Here</a>
-</p>
+<button onclick="logout()">
 
-</form>
+Logout
+
+</button>
+
+</div>
 
 </section>
+
 <section class="newsletter">
 
 <h2>Subscribe to Our Newsletter</h2>
 
 <p>
+
 Get the latest fashion trends, exclusive offers and new arrivals directly to your inbox.
+
 </p>
 
 <form>
@@ -154,7 +187,9 @@ placeholder="Enter your email address"
 required>
 
 <button type="submit">
+
 Subscribe
+
 </button>
 
 </form>
@@ -165,12 +200,16 @@ Subscribe
 
 <footer>
 
+<div class="footer-container">
+
 <div class="footer-section">
 
 <h3>StyleHub</h3>
 
 <p>
+
 StyleHub is your destination for premium fashion, quality apparel and stylish accessories at affordable prices.
+
 </p>
 
 </div>
@@ -180,10 +219,15 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <h3>Quick Links</h3>
 
 <ul>
+
 <li><a href="index.html">Home</a></li>
+
 <li><a href="products.html">Products</a></li>
+
 <li><a href="about.html">About Us</a></li>
+
 <li><a href="contact.html">Contact Us</a></li>
+
 </ul>
 
 </div>
@@ -193,10 +237,15 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <h3>Customer Service</h3>
 
 <ul>
+
 <li><a href="#">FAQs</a></li>
+
 <li><a href="#">Shipping Policy</a></li>
+
 <li><a href="#">Return Policy</a></li>
+
 <li><a href="#">Privacy Policy</a></li>
+
 </ul>
 
 </div>
@@ -206,23 +255,49 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <h3>Follow Us</h3>
 
 <ul>
+
 <li><a href="#">Facebook</a></li>
+
 <li><a href="#">Instagram</a></li>
+
 <li><a href="#">Twitter</a></li>
+
 <li><a href="#">YouTube</a></li>
+
 </ul>
+
+</div>
 
 </div>
 
 <hr>
 
 <p class="copyright">
+
 &copy; 2026 StyleHub. All Rights Reserved.
+
 </p>
 
 </footer>
 
 <script src="script.js"></script>
 
+<script>
+
+function logout(){
+
+localStorage.removeItem("loggedIn");
+
+localStorage.removeItem("userEmail");
+
+alert("Logged out successfully!");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
 </body>
+
 </html>

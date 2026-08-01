@@ -18,9 +18,7 @@
 <header>
 
 <div class="logo">
-
 <h1>StyleHub</h1>
-
 </div>
 
 <div class="menu-toggle">&#9776;</div>
@@ -30,11 +28,18 @@
 <ul>
 
 <li><a href="index.html">Home</a></li>
+
 <li><a href="products.html">Products</a></li>
+
 <li><a href="about.html">About</a></li>
+
 <li><a href="contact.html">Contact</a></li>
+
 <li><a href="account.html">Account</a></li>
+
 <li><a href="cart.html">Cart</a></li>
+
+<li><a href="login.html">Login</a></li>
 
 </ul>
 
@@ -49,7 +54,7 @@
 <img
 id="product-image"
 src=""
-alt="Product Image">
+alt="Product">
 
 </div>
 
@@ -61,7 +66,11 @@ alt="Product Image">
 
 <p id="product-description"></p>
 
-<label>Size</label>
+<label id="size-label">
+
+Size
+
+</label>
 
 <select id="size">
 
@@ -74,18 +83,26 @@ alt="Product Image">
 
 <br><br>
 
-<label>Colour</label>
+<div id="colour-container">
+
+<label>
+
+Colour
+
+</label>
 
 <select id="colour">
 
 <option>Black</option>
 <option>White</option>
 <option>Blue</option>
-<option>Pink</option>
+<option>Brown</option>
 
 </select>
 
 <br><br>
+
+</div>
 
 <label>Quantity</label>
 
@@ -95,11 +112,9 @@ id="quantity"
 value="1"
 min="1">
 
-<br><br>
-
 <button onclick="addProductToCart()">
 
-Add to Cart
+Add To Cart
 
 </button>
 
@@ -107,185 +122,88 @@ Add to Cart
 
 </section>
 
-<script src="script.js"></script>
+<section class="related-products">
 
-<script>
+<h2>You May Also Like</h2>
 
-const products={
+<div class="product-container">
 
-hoodie:{
-name:"Men's Premium Hoodie",
-price:2499,
-image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=700",
-description:"Premium cotton hoodie with modern fit."
-},
+<div class="product-card">
 
-dress:{
-name:"Women's Floral Dress",
-price:1999,
-image:"https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=700",
-description:"Elegant floral dress for every occasion."
-},
+<img src="images/hoodie.jpeg" alt="Hoodie">
 
-sneakers:{
-name:"Classic Sneakers",
-price:3499,
-image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700",
-description:"Comfortable everyday sneakers."
-},
+<h3>Fear of God Essentials Hoodie</h3>
 
-jacket:{
-name:"Leather Jacket",
-price:4999,
-image:"https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?w=700",
-description:"Premium leather jacket with a stylish finish."
-},
+<p>₹8,999</p>
 
-handbag:{
-name:"Premium Handbag",
-price:2299,
-image:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=700",
-description:"Elegant handbag suitable for every occasion."
-},
+<a href="product.html?product=hoodie">
 
-watch:{
-name:"Smart Watch",
-price:3999,
-image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700",
-description:"Feature-packed smartwatch with a modern design."
-},
+<button>View Product</button>
 
-tshirt:{
-name:"Casual T-Shirt",
-price:799,
-image:"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=700",
-description:"Soft cotton T-shirt for daily wear."
-},
+</a>
 
-jeans:{
-name:"Blue Denim Jeans",
-price:1499,
-image:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=700",
-description:"Comfortable slim-fit denim jeans."
-},
+</div>
 
-shirt:{
-name:"Summer Cotton Shirt",
-price:999,
-image:"https://images.unsplash.com/photo-1603252109303-2751441dd157?w=700",
-description:"Lightweight cotton shirt for all-day comfort."
-},
+<div class="product-card">
 
-blazer:{
-name:"Women's Blazer",
-price:2799,
-image:"https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=700",
-description:"Elegant blazer with a premium tailored fit."
-},
+<img src="images/sneakers.jpeg" alt="Nike Air Force 1">
 
-sportsshoes:{
-name:"Sports Shoes",
-price:2999,
-image:"https://images.unsplash.com/photo-1549298916-b41d501d3772?w=700",
-description:"High-performance sports shoes with excellent grip."
-},
+<h3>Nike Air Force 1</h3>
 
-backpack:{
-name:"Travel Backpack",
-price:1899,
-image:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700",
-description:"Spacious backpack designed for travel and daily use."
-}
+<p>₹7,499</p>
 
-};
+<a href="product.html?product=sneakers">
 
-const params = new URLSearchParams(window.location.search);
+<button>View Product</button>
 
-const productId = params.get("product") || "hoodie";
+</a>
 
-const product = products[productId] || products.hoodie;
+</div>
 
-document.getElementById("product-name").textContent = product.name;
+<div class="product-card">
 
-document.getElementById("product-price").textContent = "₹" + product.price;
+<img src="images/watch.jpeg" alt="Rolex">
 
-document.getElementById("product-image").src = product.image;
+<h3>Rolex Automatic Watch</h3>
 
-document.getElementById("product-description").textContent = product.description;
+<p>₹1,99,999</p>
 
-// =============================
-// ADD TO CART
-// =============================
+<a href="product.html?product=watch">
 
-function addProductToCart() {
+<button>View Product</button>
 
-const size = document.getElementById("size").value;
+</a>
 
-const colour = document.getElementById("colour").value;
+</div>
 
-const quantity = parseInt(document.getElementById("quantity").value);
+<div class="product-card">
 
-if (quantity < 1) {
-alert("Please select a valid quantity.");
-return;
-}
+<img src="images/handbag.jpeg" alt="Louis Vuitton Handbag">
 
-if (typeof addToCart === "function") {
+<h3>Louis Vuitton Handbag</h3>
 
-addToCart(
-product.name,
-product.price,
-size,
-colour,
-quantity
-);
+<p>₹2,49,999</p>
 
-} else {
+<a href="product.html?product=handbag">
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+<button>View Product</button>
 
-cart.push({
-name: product.name,
-price: product.price,
-size: size,
-colour: colour,
-quantity: quantity
-});
+</a>
 
-localStorage.setItem("cart", JSON.stringify(cart));
+</div>
 
-}
+</div>
 
-alert(product.name + " added to cart successfully!");
-
-}
-
-// =============================
-// HAMBURGER MENU
-// =============================
-
-const menuToggle = document.querySelector(".menu-toggle");
-
-const navMenu = document.querySelector("nav ul");
-
-if (menuToggle) {
-
-menuToggle.addEventListener("click", function () {
-
-navMenu.classList.toggle("active");
-
-});
-
-}
-
-</script>
+</section>
 
 <section class="newsletter">
 
 <h2>Subscribe to Our Newsletter</h2>
 
 <p>
-Get updates on the latest fashion collections and exclusive discounts.
+
+Get updates on the latest fashion collections and exclusive offers.
+
 </p>
 
 <form>
@@ -314,7 +232,9 @@ Subscribe
 <h3>StyleHub</h3>
 
 <p>
-Premium fashion for every style.
+
+Premium fashion for men, women, kids and luxury accessories.
+
 </p>
 
 </div>
@@ -326,9 +246,16 @@ Premium fashion for every style.
 <ul>
 
 <li><a href="index.html">Home</a></li>
+
 <li><a href="products.html">Products</a></li>
+
 <li><a href="about.html">About</a></li>
+
 <li><a href="contact.html">Contact</a></li>
+
+<li><a href="account.html">Account</a></li>
+
+<li><a href="cart.html">Cart</a></li>
 
 </ul>
 
@@ -375,6 +302,62 @@ Premium fashion for every style.
 </p>
 
 </footer>
+
+<script src="script.js"></script>
+
+<script>
+
+const descriptions={
+
+hoodie:"Fear of God Essentials premium oversized hoodie made with soft cotton for everyday luxury streetwear.",
+
+tshirt:"Premium Lacoste cotton T-Shirt offering timeless style and comfort.",
+
+jeans:"Luxury Gucci GG Monogram Jeans crafted with premium denim and iconic designer styling.",
+
+shirt:"Burberry premium cotton shirt designed for both formal and casual wear.",
+
+jacket:"Premium black jacket with a modern luxury finish and everyday comfort.",
+
+sneakers:"Nike Air Force 1 featuring premium leather construction and timeless street style.",
+
+sportsshoes:"Nike performance sports shoes built for comfort, stability and everyday training.",
+
+dress:"Luxury floral dress designed for elegant occasions with premium fabric.",
+
+blazer:"Versace black blazer with luxury tailoring and iconic styling.",
+
+kidshoodie:"Jordan Kids Hoodie made from premium fleece for warmth and comfort.",
+
+kidstshirt:"Jordan Kids T-Shirt made from soft premium cotton for everyday wear.",
+
+watch:"Rolex Automatic Watch featuring premium craftsmanship and timeless luxury.",
+
+handbag:"Louis Vuitton luxury handbag crafted with iconic designer styling.",
+
+backpack:"Louis Vuitton premium backpack designed for travel and everyday luxury.",
+
+sunglasses:"Louis Vuitton premium sunglasses with luxury designer styling."
+
+};
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+loadProduct();
+
+const params=new URLSearchParams(window.location.search);
+
+const productId=params.get("product") || "hoodie";
+
+if(descriptions[productId]){
+
+document.getElementById("product-description").textContent=descriptions[productId];
+
+}
+
+});
+
+</script>
 
 </body>
 

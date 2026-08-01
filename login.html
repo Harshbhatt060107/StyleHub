@@ -16,16 +16,12 @@
     </div>
 
     <div class="menu-toggle">
+        &#9776;
+    </div>
 
-&#9776;
-
-</div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
 
 <li><a href="products.html">Products</a></li>
 
@@ -39,9 +35,8 @@
 
 <li><a href="login.html">Login</a></li>
 
-</ul>
-
-</nav>
+        </ul>
+    </nav>
 
 </header>
 
@@ -49,11 +44,15 @@
 
 <section class="login">
 
-<h2>Login to Your Account</h2>
+<h2>Welcome Back</h2>
 
-<form>
+<p>
+Sign in to continue shopping premium collections at StyleHub.
+</p>
 
-<label for="email">Email Address</label><br>
+<form id="login-form">
+
+<label for="email">Email Address</label>
 
 <input
 type="email"
@@ -61,9 +60,7 @@ id="email"
 placeholder="Enter your email address"
 required>
 
-<br><br>
-
-<label for="password">Password</label><br>
+<label for="password">Password</label>
 
 <input
 type="password"
@@ -71,7 +68,7 @@ id="password"
 placeholder="Enter your password"
 required>
 
-<br><br>
+<div style="margin:15px 0;">
 
 <input
 type="checkbox"
@@ -81,22 +78,36 @@ id="remember">
 Remember Me
 </label>
 
-<br><br>
+</div>
+
+<p>
+<a href="#">
+Forgot Password?
+</a>
+</p>
 
 <button type="submit">
 Login
 </button>
 
-<br><br>
+<hr style="margin:30px 0;">
 
 <p>
-Don't have an account?
-<a href="account.html">Create Account</a>
+New to StyleHub?
 </p>
+
+<button
+type="button"
+onclick="window.location.href='account.html'">
+
+Continue as Demo User
+
+</button>
 
 </form>
 
 </section>
+
 <section class="newsletter">
 
 <h2>Subscribe to Our Newsletter</h2>
@@ -124,6 +135,8 @@ Subscribe
 
 <footer>
 
+<div class="footer-container">
+
 <div class="footer-section">
 
 <h3>StyleHub</h3>
@@ -141,8 +154,8 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="products.html">Products</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="contact.html">Contact Us</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 
 </div>
@@ -170,6 +183,8 @@ StyleHub is your destination for premium fashion, quality apparel and stylish ac
 <li><a href="#">Twitter</a></li>
 <li><a href="#">YouTube</a></li>
 </ul>
+
+</div>
 
 </div>
 
